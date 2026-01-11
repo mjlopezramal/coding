@@ -9,15 +9,16 @@ nano coding/Session_1_exercise.md
 docker pull csicunam/bioinformatics_iamz
 cd coding
 docker pull csicunam/bioinformatics_iamz
-
-# Set persistent folder for results files to avoid data loss when docker is turned off
-# For instance, for the VEP class you could create one named 'vep_class'
-mkdir $HOME/vep_class 
-chmod a+w $HOME/vep_class
-
-# launch docker binding the persistent folder to internal folder (/data)
-sudo docker run -t -i -v $HOME/vep_class:/data -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=$DISPLAY csicunam/bioinformatics_iamz:latest
 ```
+Set persistent folder for results files to avoid data loss when docker is turned off
+For instance, for the VEP class you could create one named 'vep_class'
+```mkdir $HOME/vep_class 
+chmod a+w $HOME/vep_class
+```
+Launch docker binding the persistent folder to internal folder (/data)
+```sudo docker run -t -i -v $HOME/vep_class:/data -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=$DISPLAY csicunam/bioinformatics_iamz:latest
+```
+
 #4.1 Annotating coding sequences by alignment to other sequences
 ##4.1.1 Formatting a sequence collection for BLAST
 The first task is to format our test sequence set, which was obtained from UniProt:
@@ -59,7 +60,7 @@ A larger database increases the E-value for the same alignment score, making mat
 
 Thus, having 15,719 sequences in the database affects the statistical significance of BLAST search results.
 
-# 4.1.2 Querying the collection with a sample coding sequence
+## 4.1.2 Querying the collection with a sample coding sequence
 I encountered issues because BLAST was not installed inside Docker, while it was available in a Conda environment on my system. Therefore, I copied the necessary files from the Docker container to my local WSL environment.
 ```
 (base) mjlopez@DESKTOP-MBGBGC4:/mnt/c/Users/mjlop$ conda activate blast_env
@@ -69,21 +70,23 @@ I encountered issues because BLAST was not installed inside Docker, while it was
 (blast_env) mjlopez@DESKTOP-MBGBGC4:/mnt/c/Users/mjlop/coding/coding$ docker ps
 CONTAINER ID   IMAGE                                 COMMAND       CREATED          STATUS          PORTS     NAMES
 487087b874ff   csicunam/bioinformatics_iamz:latest   "/bin/bash"   24 minutes ago   Up 24 minutes             eloquent_dewdney
-#Copiar todo lo necesario a la carpeta WSL
-docker cp 487087b874ff:/home/vep/test_data/uniprot_Atha.fasta.gz /mnt/c/Users/mjlop/coding/coding/
+```
+Copiar todo lo necesario a la carpeta WSL
+```docker cp 487087b874ff:/home/vep/test_data/uniprot_Atha.fasta.gz /mnt/c/Users/mjlop/coding/coding/
 docker cp 487087b874ff:/home/vep/test_data/test.faa /mnt/c/Users/mjlop/coding/coding/
 docker cp 487087b874ff:/home/vep/test_data/test.fna /mnt/c/Users/mjlop/coding/coding/
 Successfully copied 4.64MB to /mnt/c/Users/mjlop/coding/coding/
 Successfully copied 2.56kB to /mnt/c/Users/mjlop/coding/coding/
 Successfully copied 5.12kB to /mnt/c/Users/mjlop/coding/coding/
-#Check the files:
-(blast_env) mjlopez@DESKTOP-MBGBGC4:/mnt/c/Users/mjlop/coding/coding$ ls -lh /mnt/c/Users/mjlop/coding/coding
+```
+Check the files:
+```(blast_env) mjlopez@DESKTOP-MBGBGC4:/mnt/c/Users/mjlop/coding/coding$ ls -lh /mnt/c/Users/mjlop/coding/coding
 total 4.5M
 -rwxrwxrwx 1 mjlopez mjlopez 1018 Nov  6 11:14 test.faa
 -rwxrwxrwx 1 mjlopez mjlopez 3.2K Nov  6 11:14 test.fna
 -rwxrwxrwx 1 mjlopez mjlopez 4.5M Nov  6 11:14 uniprot_Atha.fasta.gz
 (blast_env) mjlopez@DESKTOP-MBGBGC4:/mnt/c/Users/mjlop/coding/coding$ cd /mnt/c/Users/mjlop/coding/coding
-´´´
+```
 
 At this point, I will work with protein ARF6. Its protein and transcript sequence is in files test.faa and test.fna, respectively. And I shall now look for similar sequences in my collection.
 **Exe2)*** Can you redirect the output to separate files called test.faa.blast and test.fna.blast?
@@ -138,7 +141,7 @@ Observed differences:
    - `blastx` may align only fragments of the protein  
    - `blastp` usually aligns the full protein  
 
-# 4.1.3 Producing a sequence profile
+## 4.1.3 Producing a sequence profile
 Here I’m making a sequence profile out of similar sequences matched with three iterations of BLASTP, using PSI-BLAST:
 1.	Make sure I’m in the propor directory:
 ```
@@ -184,7 +187,7 @@ Last position-specific scoring matrix computed, weighted observed percentages ro
     6 A     0  -1   5   1  -2   0   0   0   0  -3  -3   0  -2  -3  -2   1   0  -4  -2  -3   10   0  79   0   0   0   0   0   0   0   0   0   0   0   0  11   0   0   0   0  0.60 0.03
     7 G     0  -3  -1  -2  -2  -2  -2   4  -3   1  -1  -2  -1  -2  -2  -1  -1  -3  -2   2    0   0   0   0   0   0   0  55   0  12   0   0   0   0   0   0   0   0   0  32  0.40 0.02
 
-# 4.1.4 Making a Hidden Markov Model (HMM) with aligned sequences
+## 4.1.4 Making a Hidden Markov Model (HMM) with aligned sequences
 This task actually comprises four steps:
 1.	Create a FASTA file with the complete protein sequences of the matches of your protein search with bit score > 200. You might find one-liners useful for this.
 The hit IDs must be filtered using bit score > 200, which corresponds to column 12:
@@ -284,12 +287,12 @@ No Hit                             Prob E-value P-value  Score    SS Cols Query 
   9 PF10105.14 ; DUF2344 ; Unchara  26.7      67 0.00069   22.0   0.8    8    5-12     38-45  (183)
  10 1SSZ_A Pulmonary surfactant-as  25.6      46 0.00048   20.3  -0.1   19   61-79      9-27  (34)
 ```
-# 4.1.6 Annotating function on orthology grounds
+## 4.1.6 Annotating function on orthology grounds
 Search for functional annotations for protein AT1G30330.2 with help from eggNOG-mapper. Make sure you set one-to-one orthologues only.
 **Exe 8)** What are the GO terms and eggNOG orthology groups of this protein?
 No puedo usar eggNOG mapper vía web en este momento porque el servicio público está fuera de servicio o devolviendo errores.
 
-# 4.1.7 Annotating function with Gene Ontology (GO) terms
+## 4.1.7 Annotating function with Gene Ontology (GO) terms
 In this exercise I will use the GO-web browser QuickGo as it is an intuitive and weekly updated resource. Although I won’t be using them in this session, there are many other related tools out there, such as UniProt or Ensembl Plants.
 The goal of this task is for you to learn how to: Search for GO annotations using different inputs (protein IDs, gene IDs and GO terms), search for all products annotated to specific GO term or GO ID and customize the research to better fit the user preferences.
 Let’s practice then:
@@ -344,7 +347,7 @@ leaf development 	GO:0048366 entradas en uniprot	Arabidopsis thaliana63
 		Prunus perisca   59	
 		Zea mays  178	
 
-#4.1.8 Predicting 3D structure
+##4.1.8 Predicting 3D structure
 Choose from the options here and model the structure of one of the sequences obtained in **Exe5**.
 **Exe 10)** Save a screen capture of your model and a table with associated quality scores.
 Done with ARF6 protein.
