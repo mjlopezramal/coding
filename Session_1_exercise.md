@@ -302,7 +302,6 @@ In prunus pérsica: Your current result set contains 6 annotations to 5 distinct
 |Photosyntesis term	|GO:0015979|	photosynthesis	|BP|
 |Photosyntesis parents	|GO:0008150 ||		BP|
 |	|GO:0009765|	photosynthesis, light reaction||
-|	
 |	|GO:0008152	|Metabolic process	||
 |Photosyntesis childrens|	GO:0009767	|photosynthetic electron transport in photosystem II ||	
 |	|GO:0009768|
