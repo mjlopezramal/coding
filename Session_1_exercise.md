@@ -330,7 +330,8 @@ In prunus pérsica: Your current result set contains 6 annotations to 5 distinct
 Choose from the options here and model the structure of one of the sequences obtained in **Exe5**.
 **Exe 10)** Save a screen capture of your model and a table with associated quality scores.
 Done with ARF6 protein.
-![Diagrama](coding/Ejercicio_10.png)
+![Diagrama](https://github.com/mjlopezramal/coding/blob/main/Ejercicio_10.png)
+
 
  
 
