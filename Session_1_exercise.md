@@ -1,5 +1,5 @@
 #Getting ready:
-``
+```
 wsl
 git clone https://github.com/mjlopezramal/coding.git
 cd coding
