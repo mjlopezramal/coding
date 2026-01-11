@@ -16,11 +16,13 @@ For instance, for the VEP class you could create one named 'vep_class'
 chmod a+w $HOME/vep_class
 ```
 Launch docker binding the persistent folder to internal folder (/data)
-```sudo docker run -t -i -v $HOME/vep_class:/data -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=$DISPLAY csicunam/bioinformatics_iamz:latest
+```
+sudo docker run -t -i -v $HOME/vep_class:/data -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=$DISPLAY csicunam/bioinformatics_iamz:latest
 ```
 
-#4.1 Annotating coding sequences by alignment to other sequences
-##4.1.1 Formatting a sequence collection for BLAST
+# 4.1 Annotating coding sequences by alignment to other sequences
+
+## 4.1.1 Formatting a sequence collection for BLAST
 The first task is to format our test sequence set, which was obtained from UniProt:
 Since I do not have write permissions in some directories, I work inside the mounted persistent folder (/data). From inside the container, I copy the file uniprot_Atha.fasta.gz into /data and decompress it there.
 ```
@@ -28,25 +30,12 @@ vep@487087b874ff:/home/vep$ ls
 bioinformatics  environment.yml  get_homologues  test_data  variant_data
 vep@487087b874ff:/home/vep$ cd test_data
 vep@487087b874ff:/home/vep/test_data$ ls
-6nt_upstream_genome.tab       regulon.rm.fna
-6nt_upstream_regulon.raw.tab  summary.tab
-6nt_upstream_regulon.rm.tab   test2.faa
-arabidopsis_cdna.fasta        test2.fna
-arabidopsis_genes.txt         test2.transcript.fna
-binding_sites.tab             test.faa
-Ensembl_repeats.tsv           test.fna
-Ensembl_stats.tsv             transcripts
-extractedContig1.6.23.vcf.gz  uniprot_Atha.fasta.gz
-manifest.csv                  uniprot_stats.tsv
-red_wine_quality.csv          vcf
-regulon.raw.fna               white_wine_quality.csv
-
 vep@487087b874ff:/home/vep/test_data$ cd /data
 vep@487087b874ff:/data$ ls
 vep@487087b874ff:/data$ cp /home/vep/test_data/uniprot_Atha.fasta.gz .
 vep@487087b874ff:/data$ gunzip uniprot_Atha.fasta.gz
 ```
-*Exe1)* How many sequences have been formatted and how does this affect the E-value of BLAST searches?
+**Exe1)** How many sequences have been formatted and how does this affect the E-value of BLAST searches?
 Each sequence in a FASTA file starts with a line beginning with >. Therefore, counting these lines gives the number of sequences.
 ```
 vep@487087b874ff:/data$ grep -c "^>" uniprot_Atha.fasta
@@ -65,26 +54,17 @@ I encountered issues because BLAST was not installed inside Docker, while it was
 ```
 (base) mjlopez@DESKTOP-MBGBGC4:/mnt/c/Users/mjlop$ conda activate blast_env
 (blast_env) mjlopez@DESKTOP-MBGBGC4:/mnt/c/Users/mjlop$ which blastp
-/home/mjlopez/miniconda3/envs/blast_env/bin/blastp
+
 (blast_env) mjlopez@DESKTOP-MBGBGC4:/mnt/c/Users/mjlop$ cd /mnt/c/Users/mjlop/coding/coding
 (blast_env) mjlopez@DESKTOP-MBGBGC4:/mnt/c/Users/mjlop/coding/coding$ docker ps
-CONTAINER ID   IMAGE                                 COMMAND       CREATED          STATUS          PORTS     NAMES
-487087b874ff   csicunam/bioinformatics_iamz:latest   "/bin/bash"   24 minutes ago   Up 24 minutes             eloquent_dewdney
 ```
 Copiar todo lo necesario a la carpeta WSL
 ```docker cp 487087b874ff:/home/vep/test_data/uniprot_Atha.fasta.gz /mnt/c/Users/mjlop/coding/coding/
 docker cp 487087b874ff:/home/vep/test_data/test.faa /mnt/c/Users/mjlop/coding/coding/
 docker cp 487087b874ff:/home/vep/test_data/test.fna /mnt/c/Users/mjlop/coding/coding/
-Successfully copied 4.64MB to /mnt/c/Users/mjlop/coding/coding/
-Successfully copied 2.56kB to /mnt/c/Users/mjlop/coding/coding/
-Successfully copied 5.12kB to /mnt/c/Users/mjlop/coding/coding/
 ```
 Check the files:
 ```(blast_env) mjlopez@DESKTOP-MBGBGC4:/mnt/c/Users/mjlop/coding/coding$ ls -lh /mnt/c/Users/mjlop/coding/coding
-total 4.5M
--rwxrwxrwx 1 mjlopez mjlopez 1018 Nov  6 11:14 test.faa
--rwxrwxrwx 1 mjlopez mjlopez 3.2K Nov  6 11:14 test.fna
--rwxrwxrwx 1 mjlopez mjlopez 4.5M Nov  6 11:14 uniprot_Atha.fasta.gz
 (blast_env) mjlopez@DESKTOP-MBGBGC4:/mnt/c/Users/mjlop/coding/coding$ cd /mnt/c/Users/mjlop/coding/coding
 ```
 
@@ -225,18 +205,23 @@ Tomamos el alineamiento multiple y construimos el HMM, lo guarda en arf6.hmm
 (blast_env) mjlopez@DESKTOP-MBGBGC4:/mnt/c/Users/mjlop/coding/coding$ hmmbuild arf6.hmm hits_bs200.aln
 ```
 4.	Scan the HMM against your sequence collection with hmmerscan and write a short report on the results. This should be deliverable **Exe6**.
-PROBLEM. I started working on the exercises several days after attending the classes, and I could not remember where HMMER was installed. The availability of HMMER tools was checked using `which`. Although `hmmerscan` was not present, other HMMER binaries such as `hmmbuild` and `hmmsearch` were available. I leave here the steps I had to follow for future reference.
+PROBLEM. I started working on the exercises several days after attending the classes, and I could not remember where HMMER was installed. 
+The availability of HMMER tools was checked using `which`. Although `hmmerscan` was not present, other HMMER binaries such as `hmmbuild` and `hmmsearch` were available. I leave here the steps I had to follow for future reference.
 HMMER is be installed, at least partially, because the following command worked:
-```hmmbuild arf6.hmm hits_bs200.aln ```
-Initial attempt to use hmmerscan:
-```hmmerscan --tblout hmm_results.tbl arf6.hmm uniprot_Atha.fasta > hmm_results.txt
+
+```
+hmmbuild arf6.hmm hits_bs200.aln 
+```
+Initial attempt to use `hmmerscan`:
+```
+hmmerscan --tblout hmm_results.tbl arf6.hmm uniprot_Atha.fasta > hmm_results.txt
 ```
 Result:
 ```hmmerscan: command not found
 ```
 The `hmmerscan` command is not available on the system. Therefore, I systematically checked the HMMER installation.
-
-3.1 Check whether hmmerscan is in the PATH:```which hmmerscan```
+I tried to check whether hmmerscan is in the PATH:
+```which hmmerscan```
 Resultado:
 ```(no output)```
 
@@ -307,50 +292,44 @@ For arabidopsis: Your current result set contains 28,553 annotations to 8,929 di
 In prunus pérsica: Your current result set contains 6 annotations to 5 distinct gene products.
 
 **Exe 9)** Summarize your results in a table.
-Busqueda	GO ID	Term Name	Ontology
-GO IDs	GO:0009414	response to water deprivation	BP
-	GO:0035618	regulation of auxin transport	BP
-	GO:0016491	oxidoreductase activity	MF
-Photosyntesis term	GO:0015979	photosynthesis	BP
-Photosyntesis parents	GO:0008150 
-		BP
-	GO:0009765	photosynthesis, light reaction
+|Busqueda|	GO ID |	Term |Name	| Ontology |
+|--------|------------|------|----------|----------|
+|GO IDs	|GO:0009414	|response to water deprivation	|BP |
+|	|GO:0035618	|regulation of auxin transport	|BP|
+|	|GO:0016491	|oxidoreductase activity	|MF|
+|Photosyntesis term	|GO:0015979|	photosynthesis	|BP|
+|Photosyntesis parents	|GO:0008150 ||		BP|
+|	|GO:0009765|	photosynthesis, light reaction||
+|	
+|	|GO:0008152	|Metabolic process	||
+|Photosyntesis childrens|	GO:0009767	|photosynthetic electron transport in photosystem II ||	
+|	|GO:0009768|
+|	photosynthetic electron transport in photosystem I ||
+|	|GO:0009769|	photosynthetic electron transport in photosystem II, oxygen evolving complex||
+|A0A068LKP4|	-|||		
+|A0A097PR28|	GO:0008270|||
+||GO:0046872|||
+||GO:0006281|||
+||GO:0006289|||
+||GO:0006351|||
+||GO:0006974|||
+||GO:0005634|||
+||GO:0000439|||
+|A 0A059Q6N8|	GO:0015979|||
+||GO:0019684|||
+||GO:0005737|||
+||GO:0009535|||
+||GO:0016020|||
+||GO:0009523|||
+|Leaf product|	GO:0048366	1018 gen products |||		
+|Leaf development 	|GO:0048366 entradas en uniprot-->	|Arabidopsis thaliana:637;Prunus perisca:59;		Zea mays:178 ||
 	
-	GO:0008152	Metabolic process	
-Photosyntesis parents	GO:0009767	photosynthetic electron transport in photosystem II	
-	GO:0009768
-	photosynthetic electron transport in photosystem I
-	
-	GO:0009769	photosynthetic electron transport in photosystem II, oxygen evolving complex
-	
-A0A068LKP4	-		
-A0A097PR28	GO:0008270
-GO:0046872
-GO:0006281
-GO:0006289
-GO:0006351
-GO:0006974
-GO:0005634
-GO:0000439
-	
-A 0A059Q6N8	GO:0015979
-GO:0019684
-GO:0005737
-GO:0009535
-
-GO:0016020
-GO:0009523
-	
-Leaf product	GO:0048366
-	1018 gen products		
-leaf development 	GO:0048366 entradas en uniprot	Arabidopsis thaliana637	
-		Prunus perisca   59	
-		Zea mays  178	
 
 ##4.1.8 Predicting 3D structure
 Choose from the options here and model the structure of one of the sequences obtained in **Exe5**.
 **Exe 10)** Save a screen capture of your model and a table with associated quality scores.
 Done with ARF6 protein.
- 
+![Diagrama](coding/Ejercicio_10.png)
+
  
 
