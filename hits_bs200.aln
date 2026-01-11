@@ -1,0 +1,74 @@
+CLUSTAL O(1.2.4) multiple sequence alignment
+
+
+sp|Q9LQE8|ARFN_ARATH      -------------------------ME-----------SG-----NVVNTQPE-------
+sp|Q94JM3|ARFB_ARATH      ----------------------MASSE----VSMKGNRGGDNFSSSGFS-DPKETRNVSV
+sp|Q9ZTX9|ARFD_ARATH      -------------MEFDLNTEIAEVEEEENDDVGVGVGGGTRIDKGRLGISPSSSSSCS-
+sp|P93022|ARFG_ARATH      ----------------------MKA-P-----------SS-----NGV--SP--------
+sp|Q8L7G0|ARFA_ARATH      ----------------------MAA--------------S-----NHS--SG--------
+sp|Q9SKN5|ARFJ_ARATH      ------------------------------------------------------------
+sp|Q84WU6|ARFQ_ARATH      -------------------------------------------------MSPP-------
+sp|Q8RYC8|ARFS_ARATH      ----------------------MKA-------------PS-----NGF--LP--------
+sp|O23661|ARFC_ARATH      -------------MGGLIDLNVMETEEDETQTQTPSS--------ASGSVSPTSSSSAS-
+sp|P93024|ARFE_ARATH      -----------------MMASLSCV-EDKMKTSCLVNGGGTI--------TTTTSQSTLL
+sp|Q9FGV1|ARFH_ARATH      ----------------------MKL-------------ST-----SGLGQQG--------
+sp|Q9XID4|ARFL_ARATH      -------------------------ME-----------SG-----NVVNAQPE-------
+sp|Q9LQE3|ARFO_ARATH      -------------------------ME-----------TG-----NVVNAQPE-------
+sp|Q93YR9|ARFP_ARATH      -------------------------------------------------MINV-------
+sp|Q9C8N9|ARFU_ARATH      -------------------------ME-----------SG-----NIVNAQPK-------
+sp|Q9XED8|ARFI_ARATH      ------------------------------------------------------------
+sp|Q9ZPY6|ARFK_ARATH      MSQTSLEPLIISIIKLQILQLWLKLIA-----------VG--------------------
+sp|Q9C5W9|ARFR_ARATH      ----------------------MASVE-----------GD-----DDFG--S--------
+sp|Q9C7I9|ARFT_ARATH      -------------------------ME-----------TG-----NVVNAQPE-------
+sp|Q9C8N7|ARFV_ARATH      -------------------------ME-----------SG-----NIVNAQPE-------
+sp|Q9ZTX8|ARFF_ARATH      ----------------------MRL-------------SS-----AGFNPQP--------
+sp|Q9FX25|ARFM_ARATH      -------------------------ME-----------NN-----GEMNAQPE-------
+                                                                                      
+
+sp|Q9LQE8|ARFN_ARATH      ---------LSGIIDGSKSY--MYEQLWKLCAGPLCDIPKLGEKVYYFPQGHIELVEAS-
+sp|Q94JM3|ARFB_ARATH      A--GEGQKSNSTRSAAAERALDPEAALYR-------------------------------
+sp|Q9ZTX9|ARFD_ARATH      ----SGSSSSSSSTGSA------S------------------------------------
+sp|P93022|ARFG_ARATH      -----------NPVEGERRN--INSELWHACAGPLISLPPAGSLVVYFPQGHSEQVAASM
+sp|Q8L7G0|ARFA_ARATH      -----------KPGGVLSDA--LCRELWHACAGPLVTLPREGERVYYFPEGHMEQLEASM
+sp|Q9SKN5|ARFJ_ARATH      --------------MEQEKS--LDPQLWHACAGSMVQIPSLNSTVFYFAQGHTEHAHAPP
+sp|Q84WU6|ARFQ_ARATH      ---------SATAGDINHRE--VDPTIWRACAGASVQIPVLHSRVYYFPQGHVEHCC--P
+sp|Q8RYC8|ARFS_ARATH      -----------SSNEGEKKP--INSQLWHACAGPLVSLPPVGSLVVYFPQGHSEQVAASM
+sp|O23661|ARFC_ARATH      ----VSVVSSNSAGGGV------CLELWHACA----------------------------
+sp|P93024|ARFE_ARATH      EEMKLLKDQSGTRKPVI------NSELWHACA----------------------------
+sp|Q9FGV1|ARFH_ARATH      -----------HE---GEKC--LNSELWHACAGPLVSLPSSGSRVVYFPQGHSEQVAATT
+sp|Q9XID4|ARFL_ARATH      ---------LSGIIDGSKSY--VYEQLWKLCAGPLCDIPKLGEKVYYFPQGHIELVETS-
+sp|Q9LQE3|ARFO_ARATH      ---------LSGIIDRSKSY--MYEQLWKLCAGPLCDIPKLGEKVYYFPQGNIELVEAS-
+sp|Q93YR9|ARFP_ARATH      ---------MNPMKGGTEKG--LDPQLWHACAGGMVRMPPMNSKVFYFPQGHAENAYDCV
+sp|Q9C8N9|ARFU_ARATH      ---------LSGIIDGSKSY--MYEQLWKLCAGPLCDIPKLGENVYYFPQGNIELVQAS-
+sp|Q9XED8|ARFI_ARATH      ------------MANRGGEY--LYDELWKLCAGPLVDVPQAQERVYYFPQGHMEQLEAST
+sp|Q9ZPY6|ARFK_ARATH      -----------WNLGSNDDE--LYTELWKACAGPLVEVPRYGER----------------
+sp|Q9C5W9|ARFR_ARATH      -----------SSSRSYQDQ--LYTELWKVCAGPLVEVPRAQERVFYFPQGHMEQLVAST
+sp|Q9C7I9|ARFT_ARATH      ---------LSGIIDGSKSY--MYEQLWKLCAGPLCDIPKLGENVYYFPQGNIELVDAS-
+sp|Q9C8N7|ARFV_ARATH      ---------LSGIIDGSKSY--MYEQLWKLCAGPLCDIPKLGEKIYYFPQGNIELVEAS-
+sp|Q9ZTX8|ARFF_ARATH      -----------HEVTGEKRV--LNSELWHACAGPLVSLPPVGSRVVYFPQGHSEQVAAST
+sp|Q9FX25|ARFM_ARATH      ---------LS--VDITKTY--MYEKLWNICAGPLCVLPKPGEKVYYFPQGHIELIENST
+                                                                                      
+
+sp|Q9LQE8|ARFN_ARATH      ----------------
+sp|Q94JM3|ARFB_ARATH      ----------------
+sp|Q9ZTX9|ARFD_ARATH      ----------------
+sp|P93022|ARFG_ARATH      QK--------------
+sp|Q8L7G0|ARFA_ARATH      HQGL------------
+sp|Q9SKN5|ARFJ_ARATH      DFHAPRVPPLILCRVV
+sp|Q84WU6|ARFQ_ARATH      LLSTLPSST-------
+sp|Q8RYC8|ARFS_ARATH      QKQ-------------
+sp|O23661|ARFC_ARATH      ----------------
+sp|P93024|ARFE_ARATH      ----------------
+sp|Q9FGV1|ARFH_ARATH      NKEV------------
+sp|Q9XID4|ARFL_ARATH      ----------------
+sp|Q9LQE3|ARFO_ARATH      ----------------
+sp|Q93YR9|ARFP_ARATH      DFGNLPI---------
+sp|Q9C8N9|ARFU_ARATH      ----------------
+sp|Q9XED8|ARFI_ARATH      QQVDLNTMKPLFVL--
+sp|Q9ZPY6|ARFK_ARATH      ----------------
+sp|Q9C5W9|ARFR_ARATH      N---------------
+sp|Q9C7I9|ARFT_ARATH      ----------------
+sp|Q9C8N7|ARFV_ARATH      ----------------
+sp|Q9ZTX8|ARFF_ARATH      N---------------
+sp|Q9FX25|ARFM_ARATH      R---------------
+                                          

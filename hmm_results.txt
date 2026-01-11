@@ -1,0 +1,350 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.4 (Aug 2023); http://hmmer.org/
+# Copyright (C) 2023 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  arf6.hmm
+# target sequence database:        uniprot_Atha.fasta
+# per-seq hits tabular output:     hmm_results.tbl
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       hits_bs200  [M=102]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence             Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------             -----------
+    6.7e-30  102.8   0.1    1.2e-29  102.0   0.1    1.4  1  sp|Q9LP07|ARFW_ARATH  Putative auxin response factor 23 OS=Ar
+    6.9e-30  102.8   0.0    1.5e-29  101.7   0.0    1.5  1  sp|Q9LQE8|ARFN_ARATH  Putative auxin response factor 14 OS=Ar
+    3.4e-29  100.5   0.0    8.5e-29   99.3   0.0    1.7  1  sp|Q9XID4|ARFL_ARATH  Auxin response factor 12 OS=Arabidopsis
+    8.3e-29   99.3   0.0    2.1e-28   98.0   0.0    1.7  1  sp|Q9LQE3|ARFO_ARATH  Putative auxin response factor 15 OS=Ar
+    9.6e-29   99.1   0.3    2.3e-28   97.9   0.0    1.8  1  sp|Q9ZPY6|ARFK_ARATH  Auxin response factor 11 OS=Arabidopsis
+    9.7e-29   99.1   0.1    2.6e-28   97.7   0.0    1.8  1  sp|Q9C8N7|ARFV_ARATH  Auxin response factor 22 OS=Arabidopsis
+    1.4e-28   98.6   0.0      3e-28   97.5   0.0    1.6  1  sp|Q9C8N9|ARFU_ARATH  Putative auxin response factor 21 OS=Ar
+    2.4e-28   97.8   0.0    6.3e-28   96.5   0.0    1.7  1  sp|Q9C7I9|ARFT_ARATH  Auxin response factor 20 OS=Arabidopsis
+      6e-26   90.1   0.0    1.2e-25   89.2   0.0    1.5  1  sp|Q93YR9|ARFP_ARATH  Auxin response factor 16 OS=Arabidopsis
+    1.2e-25   89.1   0.0    3.3e-25   87.8   0.0    1.7  1  sp|Q9XED8|ARFI_ARATH  Auxin response factor 9 OS=Arabidopsis 
+    1.3e-24   85.8   0.1    2.6e-24   84.9   0.1    1.5  1  sp|Q9SKN5|ARFJ_ARATH  Auxin response factor 10 OS=Arabidopsis
+    1.6e-24   85.5   0.1    1.6e-24   85.5   0.1    2.2  1  sp|Q9ZTX8|ARFF_ARATH  Auxin response factor 6 OS=Arabidopsis 
+      2e-24   85.2   0.0    4.6e-24   84.1   0.0    1.6  1  sp|Q9FX25|ARFM_ARATH  Auxin response factor 13 OS=Arabidopsis
+      3e-24   84.6   0.0    6.4e-24   83.6   0.0    1.5  1  sp|Q9C5W9|ARFR_ARATH  Auxin response factor 18 OS=Arabidopsis
+    2.3e-23   81.8   0.0    5.7e-23   80.6   0.0    1.7  1  sp|Q94JM3|ARFB_ARATH  Auxin response factor 2 OS=Arabidopsis 
+    2.9e-23   81.5   0.1    6.4e-23   80.4   0.1    1.7  1  sp|Q8L7G0|ARFA_ARATH  Auxin response factor 1 OS=Arabidopsis 
+    7.9e-23   80.1   0.1    7.9e-23   80.1   0.1    2.6  1  sp|Q8RYC8|ARFS_ARATH  Auxin response factor 19 OS=Arabidopsis
+    9.4e-23   79.9   0.1    9.4e-23   79.9   0.1    2.5  1  sp|P93022|ARFG_ARATH  Auxin response factor 7 OS=Arabidopsis 
+    2.3e-22   78.6   1.3    3.1e-22   78.2   0.1    1.9  1  sp|Q9FGV1|ARFH_ARATH  Auxin response factor 8 OS=Arabidopsis 
+    1.6e-20   72.7   0.4    3.7e-20   71.5   0.1    1.8  1  sp|Q84WU6|ARFQ_ARATH  Auxin response factor 17 OS=Arabidopsis
+    9.3e-20   70.2   2.2    1.6e-19   69.5   0.0    2.3  2  sp|P93024|ARFE_ARATH  Auxin response factor 5 OS=Arabidopsis 
+    1.6e-19   69.5   0.0    3.8e-19   68.3   0.0    1.7  1  sp|Q9ZTX9|ARFD_ARATH  Auxin response factor 4 OS=Arabidopsis 
+    4.2e-19   68.1   0.0      8e-19   67.2   0.0    1.5  1  sp|O23661|ARFC_ARATH  Auxin response factor 3 OS=Arabidopsis 
+
+
+Domain annotation for each sequence (and alignments):
+>> sp|Q9LP07|ARFW_ARATH  Putative auxin response factor 23 OS=Arabidopsis thaliana OX=3702 GN=ARF23 PE=5 SV=2
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  102.0   0.1   1.7e-32   1.2e-29      26      89 ..       1      64 [.       1      82 [. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 102.0 bits;  conditional E-value: 1.7e-32
+            hits_bs200 26 mesgnevnaspesssskdgekkelyeeLWkaCAGplvelPklgekVyYFpqGhiEqveastdke 89
+                          mesgn vn+++e+s+++dg+k+++ye+LWk+CAGpl+++PklgekVyYFpqGhiE+veast+ e
+  sp|Q9LP07|ARFW_ARATH  1 MESGNVVNVQSELSGIIDGSKSYMYEQLWKLCAGPLCDIPKLGEKVYYFPQGHIELVEASTREE 64
+                          699*********************************************************9876 PP
+
+>> sp|Q9LQE8|ARFN_ARATH  Putative auxin response factor 14 OS=Arabidopsis thaliana OX=3702 GN=ARF14 PE=3 SV=2
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  101.7   0.0   2.1e-32   1.5e-29      26      89 ..       1      64 [.       1      74 [. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 101.7 bits;  conditional E-value: 2.1e-32
+            hits_bs200 26 mesgnevnaspesssskdgekkelyeeLWkaCAGplvelPklgekVyYFpqGhiEqveastdke 89
+                          mesgn vn++pe+s+++dg+k+++ye+LWk+CAGpl+++PklgekVyYFpqGhiE+veast+ e
+  sp|Q9LQE8|ARFN_ARATH  1 MESGNVVNTQPELSGIIDGSKSYMYEQLWKLCAGPLCDIPKLGEKVYYFPQGHIELVEASTREE 64
+                          699*********************************************************9875 PP
+
+>> sp|Q9XID4|ARFL_ARATH  Auxin response factor 12 OS=Arabidopsis thaliana OX=3702 GN=ARF12 PE=2 SV=2
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   99.3   0.0   1.2e-31   8.5e-29      26      89 ..       1      64 [.       1      76 [. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 99.3 bits;  conditional E-value: 1.2e-31
+            hits_bs200 26 mesgnevnaspesssskdgekkelyeeLWkaCAGplvelPklgekVyYFpqGhiEqveastdke 89
+                          mesgn vna+pe+s+++dg+k+++ye+LWk+CAGpl+++PklgekVyYFpqGhiE+ve+st+ e
+  sp|Q9XID4|ARFL_ARATH  1 MESGNVVNAQPELSGIIDGSKSYVYEQLWKLCAGPLCDIPKLGEKVYYFPQGHIELVETSTREE 64
+                          699*******************************************************999865 PP
+
+>> sp|Q9LQE3|ARFO_ARATH  Putative auxin response factor 15 OS=Arabidopsis thaliana OX=3702 GN=ARF15 PE=3 SV=2
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   98.0   0.0   3.1e-31   2.1e-28      26      89 ..       1      64 [.       1      76 [. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 98.0 bits;  conditional E-value: 3.1e-31
+            hits_bs200 26 mesgnevnaspesssskdgekkelyeeLWkaCAGplvelPklgekVyYFpqGhiEqveastdke 89
+                          me+gn vna+pe+s+++d++k+++ye+LWk+CAGpl+++PklgekVyYFpqG+iE+veast+ e
+  sp|Q9LQE3|ARFO_ARATH  1 METGNVVNAQPELSGIIDRSKSYMYEQLWKLCAGPLCDIPKLGEKVYYFPQGNIELVEASTREE 64
+                          6899********************************************************9876 PP
+
+>> sp|Q9ZPY6|ARFK_ARATH  Auxin response factor 11 OS=Arabidopsis thaliana OX=3702 GN=ARF11 PE=2 SV=3
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   97.9   0.0   3.3e-31   2.3e-28       1      95 [.       1      85 [.       1      98 [. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 97.9 bits;  conditional E-value: 3.3e-31
+            hits_bs200  1 lsqtslepliisileldleaelmkvmesgnevnaspesssskdgekkelyeeLWkaCAGplvelPklgekVyYFpqGhiEqveastdkeal 91
+                          +sqtslepliisi++l++ + ++k+++ g          ++ +++++ely+eLWkaCAGplve+P++ge+V+YFpqGh+Eq+ ast+++ +
+  sp|Q9ZPY6|ARFK_ARATH  1 MSQTSLEPLIISIIKLQILQLWLKLIAVG----------WNLGSNDDELYTELWKACAGPLVEVPRYGERVFYFPQGHMEQLVASTNQGVV 81
+                          79***********************5554..........667889999***************************************9877 PP
+
+            hits_bs200 92 rssk 95
+                          +   
+  sp|Q9ZPY6|ARFK_ARATH 82 DQEI 85
+                          6554 PP
+
+>> sp|Q9C8N7|ARFV_ARATH  Auxin response factor 22 OS=Arabidopsis thaliana OX=3702 GN=ARF22 PE=2 SV=2
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   97.7   0.0   3.8e-31   2.6e-28      26      89 ..       1      64 [.       1      76 [. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 97.7 bits;  conditional E-value: 3.8e-31
+            hits_bs200 26 mesgnevnaspesssskdgekkelyeeLWkaCAGplvelPklgekVyYFpqGhiEqveastdke 89
+                          mesgn vna+pe+s+++dg+k+++ye+LWk+CAGpl+++Pklgek+yYFpqG+iE+veast+ e
+  sp|Q9C8N7|ARFV_ARATH  1 MESGNIVNAQPELSGIIDGSKSYMYEQLWKLCAGPLCDIPKLGEKIYYFPQGNIELVEASTREE 64
+                          699*********************************************************9865 PP
+
+>> sp|Q9C8N9|ARFU_ARATH  Putative auxin response factor 21 OS=Arabidopsis thaliana OX=3702 GN=ARF21 PE=3 SV=2
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   97.5   0.0   4.4e-31     3e-28      26      89 ..       1      64 [.       1      76 [. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 97.5 bits;  conditional E-value: 4.4e-31
+            hits_bs200 26 mesgnevnaspesssskdgekkelyeeLWkaCAGplvelPklgekVyYFpqGhiEqveastdke 89
+                          mesgn vna+p++s+++dg+k+++ye+LWk+CAGpl+++Pklge+VyYFpqG+iE+v+ast+ e
+  sp|Q9C8N9|ARFU_ARATH  1 MESGNIVNAQPKLSGIIDGSKSYMYEQLWKLCAGPLCDIPKLGENVYYFPQGNIELVQASTREE 64
+                          699*********************************************************9875 PP
+
+>> sp|Q9C7I9|ARFT_ARATH  Auxin response factor 20 OS=Arabidopsis thaliana OX=3702 GN=ARF20 PE=2 SV=3
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   96.5   0.0   9.2e-31   6.3e-28      26      89 ..       1      64 [.       1      76 [. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 96.5 bits;  conditional E-value: 9.2e-31
+            hits_bs200 26 mesgnevnaspesssskdgekkelyeeLWkaCAGplvelPklgekVyYFpqGhiEqveastdke 89
+                          me+gn vna+pe+s+++dg+k+++ye+LWk+CAGpl+++Pklge+VyYFpqG+iE+v ast+ e
+  sp|Q9C7I9|ARFT_ARATH  1 METGNVVNAQPELSGIIDGSKSYMYEQLWKLCAGPLCDIPKLGENVYYFPQGNIELVDASTREE 64
+                          6899********************************************************9875 PP
+
+>> sp|Q93YR9|ARFP_ARATH  Auxin response factor 16 OS=Arabidopsis thaliana OX=3702 GN=ARF16 PE=1 SV=1
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   89.2   0.0   1.7e-28   1.2e-25      36     101 ..       3      68 ..       1      69 [. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 89.2 bits;  conditional E-value: 1.7e-28
+            hits_bs200  36 pesssskdgekkelyeeLWkaCAGplvelPklgekVyYFpqGhiEqveastdkealrssklllvrv 101
+                           + ++ +k+g++k l+++LW+aCAG++v++P++++kV+YFpqGh+E++++++d+++l+ ++++l+rv
+  sp|Q93YR9|ARFP_ARATH   3 NVMNPMKGGTEKGLDPQLWHACAGGMVRMPPMNSKVFYFPQGHAENAYDCVDFGNLPIPPMVLCRV 68 
+                           567899**********************************************************98 PP
+
+>> sp|Q9XED8|ARFI_ARATH  Auxin response factor 9 OS=Arabidopsis thaliana OX=3702 GN=ARF9 PE=1 SV=1
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   87.8   0.0   4.8e-28   3.3e-25      45      99 ..       5      59 ..       1      61 [. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 87.8 bits;  conditional E-value: 4.8e-28
+            hits_bs200 45 ekkelyeeLWkaCAGplvelPklgekVyYFpqGhiEqveastdkealrssklllv 99
+                            ++ly+eLWk+CAGplv++P+++e+VyYFpqGh+Eq+east++ +l+++k+l+v
+  sp|Q9XED8|ARFI_ARATH  5 GGEYLYDELWKLCAGPLVDVPQAQERVYYFPQGHMEQLEASTQQVDLNTMKPLFV 59
+                          4579***********************************************9987 PP
+
+>> sp|Q9SKN5|ARFJ_ARATH  Auxin response factor 10 OS=Arabidopsis thaliana OX=3702 GN=ARF10 PE=2 SV=1
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   84.9   0.1   3.8e-27   2.6e-24      44     102 .]       2      60 ..       1      60 [. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 84.9 bits;  conditional E-value: 3.8e-27
+            hits_bs200  44 gekkelyeeLWkaCAGplvelPklgekVyYFpqGhiEqveastdkealrssklllvrvv 102
+                           +++k+l+++LW+aCAG++v++P+l+++V+YF+qGh+E+++a++d++a+r+++l+l+rvv
+  sp|Q9SKN5|ARFJ_ARATH   2 EQEKSLDPQLWHACAGSMVQIPSLNSTVFYFAQGHTEHAHAPPDFHAPRVPPLILCRVV 60 
+                           57899****************************************************97 PP
+
+>> sp|Q9ZTX8|ARFF_ARATH  Auxin response factor 6 OS=Arabidopsis thaliana OX=3702 GN=ARF6 PE=1 SV=2
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   85.5   0.1   2.4e-27   1.6e-24      28      90 ..       4      63 ..       1      74 [. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 85.5 bits;  conditional E-value: 2.4e-27
+            hits_bs200 28 sgnevnaspesssskdgekkelyeeLWkaCAGplvelPklgekVyYFpqGhiEqveastdkea 90
+                          s++++n +p   ++++gek+ l++eLW+aCAGplv+lP++g++V+YFpqGh+Eqv+ast+ke 
+  sp|Q9ZTX8|ARFF_ARATH  4 SSAGFNPQP---HEVTGEKRVLNSELWHACAGPLVSLPPVGSRVVYFPQGHSEQVAASTNKEV 63
+                          678999999...9**********************************************9874 PP
+
+>> sp|Q9FX25|ARFM_ARATH  Auxin response factor 13 OS=Arabidopsis thaliana OX=3702 GN=ARF13 PE=2 SV=3
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   84.1   0.0   6.7e-27   4.6e-24      26      89 ..       1      62 [.       1      72 [. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 84.1 bits;  conditional E-value: 6.7e-27
+            hits_bs200 26 mesgnevnaspesssskdgekkelyeeLWkaCAGplvelPklgekVyYFpqGhiEqveastdke 89
+                          me++ e+na+pe+s  +d++k+++ye+LW++CAGpl+ lPk gekVyYFpqGhiE++e+st+ e
+  sp|Q9FX25|ARFM_ARATH  1 MENNGEMNAQPELS--VDITKTYMYEKLWNICAGPLCVLPKPGEKVYYFPQGHIELIENSTRDE 62
+                          578899*****888..899999**************************************9765 PP
+
+>> sp|Q9C5W9|ARFR_ARATH  Auxin response factor 18 OS=Arabidopsis thaliana OX=3702 GN=ARF18 PE=1 SV=1
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   83.6   0.0   9.3e-27   6.4e-24      23      91 ..       1      64 [.       1      81 [. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 83.6 bits;  conditional E-value: 9.3e-27
+            hits_bs200 23 mkvmesgnevnaspesssskdgekkelyeeLWkaCAGplvelPklgekVyYFpqGhiEqveastdkeal 91
+                          m+++e++++++     sss+++ +++ly+eLWk+CAGplve+P+++e+V+YFpqGh+Eq+ ast+++  
+  sp|Q9C5W9|ARFR_ARATH  1 MASVEGDDDFG-----SSSSRSYQDQLYTELWKVCAGPLVEVPRAQERVFYFPQGHMEQLVASTNQGIN 64
+                          56778888886.....455788999***************************************98754 PP
+
+>> sp|Q94JM3|ARFB_ARATH  Auxin response factor 2 OS=Arabidopsis thaliana OX=3702 GN=ARF2 PE=1 SV=2
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   80.6   0.0   8.3e-26   5.7e-23      28      96 ..      37     105 ..      16     117 .. 0.78
+
+  Alignments for each domain:
+  == domain 1  score: 80.6 bits;  conditional E-value: 8.3e-26
+            hits_bs200  28 sgnevnaspesssskdgekkelyeeLWkaCAGplvelPklgekVyYFpqGhiEqveastdkealrsskl 96 
+                           ++++ ++ +  +++    + +ly+eLW+aCAGplv++P+ +++V+YFpqGhiEqveast++ a + ++l
+  sp|Q94JM3|ARFB_ARATH  37 GQKSNSTRSAAAERALDPEAALYRELWHACAGPLVTVPRQDDRVFYFPQGHIEQVEASTNQAAEQQMPL 105
+                           333333333344555555678****************************************99887765 PP
+
+>> sp|Q8L7G0|ARFA_ARATH  Auxin response factor 1 OS=Arabidopsis thaliana OX=3702 GN=ARF1 PE=1 SV=2
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   80.4   0.1   9.4e-26   6.4e-23      38      95 ..       8      65 ..       1      78 [. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 80.4 bits;  conditional E-value: 9.4e-26
+            hits_bs200 38 sssskdgekkelyeeLWkaCAGplvelPklgekVyYFpqGhiEqveastdkealrssk 95
+                          s++ +++ +++l++eLW+aCAGplv+lP+ ge+VyYFp+Gh+Eq+eas++++  + ++
+  sp|Q8L7G0|ARFA_ARATH  8 SGKPGGVLSDALCRELWHACAGPLVTLPREGERVYYFPEGHMEQLEASMHQGLEQQMP 65
+                          45678888999***************************************98666554 PP
+
+>> sp|Q8RYC8|ARFS_ARATH  Auxin response factor 19 OS=Arabidopsis thaliana OX=3702 GN=ARF19 PE=1 SV=2
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   80.1   0.1   1.2e-25   7.9e-23      36      90 ..      10      61 ..       1      70 [. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 80.1 bits;  conditional E-value: 1.2e-25
+            hits_bs200 36 pesssskdgekkelyeeLWkaCAGplvelPklgekVyYFpqGhiEqveastdkea 90
+                          p   ss++gekk ++++LW+aCAGplv+lP++g+ V+YFpqGh+Eqv+as++k++
+  sp|Q8RYC8|ARFS_ARATH 10 P---SSNEGEKKPINSQLWHACAGPLVSLPPVGSLVVYFPQGHSEQVAASMQKQT 61
+                          4...5678999*****************************************987 PP
+
+>> sp|P93022|ARFG_ARATH  Auxin response factor 7 OS=Arabidopsis thaliana OX=3702 GN=ARF7 PE=1 SV=2
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   79.9   0.1   1.4e-25   9.4e-23      28      90 ..       5      62 ..       1      74 [. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 79.9 bits;  conditional E-value: 1.4e-25
+            hits_bs200 28 sgnevnaspesssskdgekkelyeeLWkaCAGplvelPklgekVyYFpqGhiEqveastdkea 90
+                          s+n+v  sp   + ++ge++++++eLW+aCAGpl++lP++g+ V+YFpqGh+Eqv+as++k++
+  sp|P93022|ARFG_ARATH  5 SSNGV--SP---NPVEGERRNINSELWHACAGPLISLPPAGSLVVYFPQGHSEQVAASMQKQT 62
+                          55555..46...67999*******************************************987 PP
+
+>> sp|Q9FGV1|ARFH_ARATH  Auxin response factor 8 OS=Arabidopsis thaliana OX=3702 GN=ARF8 PE=1 SV=2
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   78.2   0.1   4.6e-25   3.1e-22      38      89 ..       8      59 ..       1      68 [. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 78.2 bits;  conditional E-value: 4.6e-25
+            hits_bs200 38 sssskdgekkelyeeLWkaCAGplvelPklgekVyYFpqGhiEqveastdke 89
+                          +++++++ +k+l++eLW+aCAGplv+lP+ g++V+YFpqGh+Eqv+a+t+ke
+  sp|Q9FGV1|ARFH_ARATH  8 LGQQGHEGEKCLNSELWHACAGPLVSLPSSGSRVVYFPQGHSEQVAATTNKE 59
+                          566778889***************************************9986 PP
+
+>> sp|Q84WU6|ARFQ_ARATH  Auxin response factor 17 OS=Arabidopsis thaliana OX=3702 GN=ARF17 PE=2 SV=1
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   71.5   0.1   5.4e-23   3.7e-20      34      94 ..       1      59 [.       1      68 [. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 71.5 bits;  conditional E-value: 5.4e-23
+            hits_bs200 34 aspesssskdgekkelyeeLWkaCAGplvelPklgekVyYFpqGhiEqveastdkealrss 94
+                          +sp s++++d++++e+++++W+aCAG+ v++P l+++VyYFpqGh+E+++  + +++l+ss
+  sp|Q84WU6|ARFQ_ARATH  1 MSPPSATAGDINHREVDPTIWRACAGASVQIPVLHSRVYYFPQGHVEHCC--PLLSTLPSS 59
+                          57999********************************************8..566666554 PP
+
+>> sp|P93024|ARFE_ARATH  Auxin response factor 5 OS=Arabidopsis thaliana OX=3702 GN=ARF5 PE=1 SV=3
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   69.5   0.0   2.3e-22   1.6e-19      37      92 ..      29      94 ..       2     102 .. 0.74
+   2 ?   -1.7   0.6       3.5   2.4e+03      18      50 ..     492     523 ..     478     527 .. 0.57
+
+  Alignments for each domain:
+  == domain 1  score: 69.5 bits;  conditional E-value: 2.3e-22
+            hits_bs200 37 e..........sssskdgekkelyeeLWkaCAGplvelPklgekVyYFpqGhiEqveastdkealr 92
+                          +          +  +++  k  +++eLW+aCAGplv lP++g+ VyYF qGh+Eqv+ st+ +a +
+  sp|P93024|ARFE_ARATH 29 SqstlleemklLKDQSGTRKPVINSELWHACAGPLVCLPQVGSLVYYFSQGHSEQVAVSTRRSATT 94
+                          2344555566556667777788*************************************9988765 PP
+
+  == domain 2  score: -1.7 bits;  conditional E-value: 3.5
+            hits_bs200  18 leaelmkvmesgnevnaspesssskdgekkely 50 
+                           ++++ +++++ +n++ ++p s+s++ g++++l 
+  sp|P93024|ARFE_ARATH 492 MMNQKSEMVQPQNKLTVNP-SASNTSGQEQNLS 523
+                           3333444445667887777.5555566666665 PP
+
+>> sp|Q9ZTX9|ARFD_ARATH  Auxin response factor 4 OS=Arabidopsis thaliana OX=3702 GN=ARF4 PE=1 SV=1
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   68.3   0.0   5.6e-22   3.8e-19      14      84 ..       1      97 [.       1     120 [. 0.75
+
+  Alignments for each domain:
+  == domain 1  score: 68.3 bits;  conditional E-value: 5.6e-22
+            hits_bs200 14 leldleaelmkvme..........................sgnevnaspesssskdgekkelyeeLWkaCAGplvelPklgekVyYFpqGh 78
+                          +e+dl++e+++v+e                          s+++++  ++ssss++g+ +++y+eLW+aCAGpl  lPk g+ V+YFpqGh
+  sp|Q9ZTX9|ARFD_ARATH  1 MEFDLNTEIAEVEEeenddvgvgvgggtridkgrlgispsSSSSCSSGSSSSSSSTGSASSIYSELWHACAGPLTCLPKKGNVVVYFPQGH 91
+                          68899999999987888888888887777766655555543333433344788889999******************************** PP
+
+            hits_bs200 79 iEqvea 84
+                           Eq + 
+  sp|Q9ZTX9|ARFD_ARATH 92 LEQDAM 97
+                          **9554 PP
+
+>> sp|O23661|ARFC_ARATH  Auxin response factor 3 OS=Arabidopsis thaliana OX=3702 GN=ARF3 PE=1 SV=2
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   67.2   0.0   1.2e-21     8e-19      16      84 ..       3      86 ..       1     103 [. 0.70
+
+  Alignments for each domain:
+  == domain 1  score: 67.2 bits;  conditional E-value: 1.2e-21
+            hits_bs200 16 ldleaelmkvme........sgnevnaspe..........sssskdgekkelyeeLWkaCAGplvelPklgekVyYFpqGhiEqvea 84
+                            ++ ++m+++e        s+++ ++sp+          ss+   ++   ++ eLW+aCAGpl++lPk g+ V YFpqGh Eq+ +
+  sp|O23661|ARFC_ARATH  3 GLIDLNVMETEEdetqtqtpSSASGSVSPTssssasvsvvSSN---SAGGGVCLELWHACAGPLISLPKRGSLVLYFPQGHLEQAPD 86
+                          6688899999777777777744444445555555444332222...223349********************************864 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (102 nodes)
+Target sequences:                      15719  (7141285 residues searched)
+Passed MSV filter:                       356  (0.0226478); expected 314.4 (0.02)
+Passed bias filter:                      329  (0.0209301); expected 314.4 (0.02)
+Passed Vit filter:                        46  (0.00292639); expected 15.7 (0.001)
+Passed Fwd filter:                        23  (0.0014632); expected 0.2 (1e-05)
+Initial search space (Z):              15719  [actual number of targets]
+Domain search space  (domZ):              23  [number of targets reported over threshold]
+# CPU time: 0.07u 0.02s 00:00:00.09 Elapsed: 00:00:00.39
+# Mc/sec: 1860.07
+//
+[ok]

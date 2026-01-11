@@ -1,0 +1,22 @@
+{
+  "version": "1.2",
+  "dbname": "uniprot_Atha_db",
+  "dbtype": "Protein",
+  "db-version": 5,
+  "description": "uniprot_Atha.fasta",
+  "number-of-letters": 7141285,
+  "number-of-sequences": 15719,
+  "last-updated": "2026-01-07T18:25:00",
+  "number-of-volumes": 1,
+  "bytes-total": 10299146,
+  "bytes-to-cache": 7282869,
+  "files": [
+    "uniprot_Atha_db.pdb",
+    "uniprot_Atha_db.phr",
+    "uniprot_Atha_db.pin",
+    "uniprot_Atha_db.pot",
+    "uniprot_Atha_db.psq",
+    "uniprot_Atha_db.ptf",
+    "uniprot_Atha_db.pto"
+  ]
+}
