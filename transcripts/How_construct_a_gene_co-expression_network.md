@@ -65,12 +65,12 @@ Hasta aquí tenemos listo el filtrado, la lectura y podemos hacer el mapeo con k
 Para hacer las cosas ideales, lo suyo es hacer este otro quality check y compararlo con el anterior.
 
 #Task 04: Perform pseudo-alignments of the reads from sample ABR_W_03 against the reference transcriptome (Bdistachyon_314_v3.1.transcript.TagSeq500b.fa.gz9 and indicate the expresión of the Bradi3g51200 gene in est_counts and TPM.
-## Index reference the reference transcriptome (kallisto index):
+# Index reference the reference transcriptome (kallisto index):
 ```
 vep@81b019310d08:/data$ kallisto index -i Bdistachyon_314_v3.1.transcript.TagSeq500b.idx \
 brachy/00_Reference_transcriptome/Bdistachyon_314_v3.1.transcript.TagSeq500b.fa.gz
 ```
-## Quantification for one sample (kallisto quant). Vamos a crear los mapas.
+# Quantification for one sample (kallisto quant). Vamos a crear los mapas.
 We crearte the folder is wich we are going to sabe the results of Kallisto.
 ```
 vep@81b019310d08:/data$ mkdir 03_quant && mkdir 03_quant/ABR3_W_03
